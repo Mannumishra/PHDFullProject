@@ -14,7 +14,7 @@ const AddMultiUniversities = () => {
     useEffect(() => {
         const fetchUniversityZones = async () => {
             try {
-                const response = await axios.get('http://localhost:8000/api/all-universities'); // Backend endpoint for UniversityZone
+                const response = await axios.get('https://api.iirhe.org/api/all-universities'); // Backend endpoint for UniversityZone
                 setAllUniversityZones(response.data.data);
             } catch (error) {
                 console.error("Error fetching UniversityZones", error);
@@ -54,7 +54,7 @@ const AddMultiUniversities = () => {
         setIsLoading(true);
 
         try {
-            const response = await axios.post('http://localhost:8000/api/add-multi-universities', {
+            const response = await axios.post('https://api.iirhe.org/api/add-multi-universities', {
                 UniversityZone: universityZone,
                 Universities: universities,
             });

@@ -10,7 +10,7 @@ const AllMultiUniversity = () => {
     useEffect(() => {
         const fetchAllUniversities = async () => {
             try {
-                const response = await axios.get('http://localhost:8000/api/all-multi-universities');
+                const response = await axios.get('https://api.iirhe.org/api/all-multi-universities');
                 setAllUniversities(response.data);
                 setIsLoading(false);
             } catch (error) {
@@ -29,7 +29,7 @@ const AllMultiUniversity = () => {
         if (!confirmDelete) return;
 
         try {
-            const response = await axios.delete(`http://localhost:8000/api/all-universities/${id}`);
+            const response = await axios.delete(`https://api.iirhe.org/api/all-universities/${id}`);
             if (response.status === 200) {
                 toast.success('University deleted successfully');
                 setAllUniversities(allUniversities.filter((uni) => uni._id !== id)); // Remove deleted university from the state

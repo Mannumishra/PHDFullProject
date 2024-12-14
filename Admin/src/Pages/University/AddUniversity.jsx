@@ -21,7 +21,7 @@ const AddUniversity = () => {
         setIsLoading(true);
         try {
             // Sending request to the backend
-            const response = await axios.post('http://localhost:8000/api/add-universities', { UniversityZone });
+            const response = await axios.post('https://api.iirhe.org/api/add-universities', { UniversityZone });
 
             // Show success message
             toast.success("University added successfully!");

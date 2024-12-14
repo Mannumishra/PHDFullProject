@@ -30,7 +30,7 @@ const MentorshipRequest = () => {
     setError(null); // Reset error state before submitting
 
     try {
-      const response = await axios.post("http://localhost:8000/api/submit-mentorship-request", formData);
+      const response = await axios.post("https://api.iirhe.org/api/submit-mentorship-request", formData);
       if (response.status === 201) {
         Swal.fire({
           icon: 'success',

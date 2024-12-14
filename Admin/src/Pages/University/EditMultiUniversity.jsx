@@ -16,7 +16,7 @@ const EditMultiUniversity = () => {
     useEffect(() => {
         const fetchUniversityZones = async () => {
             try {
-                const response = await axios.get('http://localhost:8000/api/all-universities');
+                const response = await axios.get('https://api.iirhe.org/api/all-universities');
                 setAllUniversityZones(response.data.data);
             } catch (error) {
                 console.error("Error fetching UniversityZones", error);
@@ -25,7 +25,7 @@ const EditMultiUniversity = () => {
 
         const fetchUniversityData = async () => {
             try {
-                const response = await axios.get(`http://localhost:8000/api/get-multi-universities/${id}`);
+                const response = await axios.get(`https://api.iirhe.org/api/get-multi-universities/${id}`);
                 const data = response.data;
                 setUniversityZone(data.UniversityZone._id);  // Ensure you're setting the _id of the zone
                 setUniversities(data.Universities);
@@ -69,7 +69,7 @@ const EditMultiUniversity = () => {
         setIsLoading(true);
 
         try {
-            const response = await axios.put(`http://localhost:8000/api/update-multi-universities/${id}`, {
+            const response = await axios.put(`https://api.iirhe.org/api/update-multi-universities/${id}`, {
                 UniversityZone: universityZone,
                 Universities: universities,
             });

@@ -42,7 +42,7 @@ const ContactUs = () => {
     }
 
     try {
-      const response = await axios.post('http://localhost:8000/api/send-consultation', formData, {
+      const response = await axios.post('https://api.iirhe.org/api/send-consultation', formData, {
         headers: {
           'Content-Type': 'application/json',
         }

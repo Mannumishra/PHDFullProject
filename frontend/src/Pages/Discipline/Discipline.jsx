@@ -7,7 +7,7 @@ const Discipline = () => {
 
   const getapiData = async () => {
     try {
-      const res = await axios.get("http://localhost:8000/api/all-discipline")
+      const res = await axios.get("https://api.iirhe.org/api/all-discipline")
       if (res.status === 200) {
         setFocusAreas(res.data.data)
       }
@@ -32,7 +32,7 @@ const Discipline = () => {
                   <Link to={`/courses/course-overview/${area.DisciplinesName}`} className="text-decoration-none">
                     <div className="focus-area-tile text-center p-3 shadow-sm bg-white rounded">
                       <img
-                        src={`http://localhost:8000/${area.DisciplinesLogo}`}
+                        src={`https://api.iirhe.org/${area.DisciplinesLogo}`}
                         alt={area.DisciplinesName}
                         className="img-fluid mb-2"
                       />

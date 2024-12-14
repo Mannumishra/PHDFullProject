@@ -18,7 +18,7 @@ const Downloads = () => {
     // Fetching resources from the API
     const fetchResources = async () => {
       try {
-        const response = await axios.get("http://localhost:8000/api/get-resources");
+        const response = await axios.get("https://api.iirhe.org/api/get-resources");
         setResources(response.data.data);
         setIsLoading(false);
       } catch (err) {
@@ -49,7 +49,7 @@ const Downloads = () => {
                 <p className="download_content">{resource.ResourcesName}</p>
                 <div>
                   <a
-                    href={`http://localhost:8000/${resource.ResourcesPdf}`}
+                    href={`https://api.iirhe.org/${resource.ResourcesPdf}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     download

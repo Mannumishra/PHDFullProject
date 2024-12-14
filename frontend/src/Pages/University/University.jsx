@@ -17,7 +17,7 @@ const University = () => {
     const fetchUniversities = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:8000/api/all-multi-universities-accordign-zone"
+          "https://api.iirhe.org/api/all-multi-universities-accordign-zone"
         );
 
         if (response.data.success) {

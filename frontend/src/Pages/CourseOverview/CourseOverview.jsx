@@ -13,7 +13,7 @@ const SciencePrograms = () => {
   const getApiData = async () => {
     try {
       const res = await axios.get(
-        `http://localhost:8000/api/all-disciplines-course-by-disciplinename/${displine}`
+        `https://api.iirhe.org/api/all-disciplines-course-by-disciplinename/${displine}`
       );
       setPrograms(res.data.data);
     } catch (error) {
@@ -25,7 +25,7 @@ const SciencePrograms = () => {
   const fetchCourseDetails = async (programName) => {
     try {
       const res = await axios.get(
-        `http://localhost:8000/api/all-disciplines-course-details-by-course-name/${encodeURIComponent(
+        `https://api.iirhe.org/api/all-disciplines-course-details-by-course-name/${encodeURIComponent(
           programName
         )}`
       );

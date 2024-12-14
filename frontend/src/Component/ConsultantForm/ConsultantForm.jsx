@@ -23,7 +23,7 @@ const ConsultantForm = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post('http://localhost:8000/api/send-consultation', formData);
+      const response = await axios.post('https://api.iirhe.org/api/send-consultation', formData);
       toast.success("Inquery Send Successfully")
       setSuccess(response.data.message);
       setFormData({ name: '', email: '', phone: '', message: '' });
