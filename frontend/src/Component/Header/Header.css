@@ -469,10 +469,10 @@
     }
   
     header .nav-links ul li .dropdown-menu li a:hover {
-      background-color: var(--light-began);
-      color: var(--color-began);
+      background-color: var(--color-blue);
+      color: white;
       padding-left: 0.5rem;
-      font-size: 0.95rem;
+      /* font-size: 0.95rem; */
     }
   }
   
